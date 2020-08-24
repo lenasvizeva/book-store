@@ -1,0 +1,40 @@
+.book-list-item {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.book-list-item .book-cover {
+  width: 120px;
+  flex-shrink: 0;
+  margin-right: 30px;
+}
+
+.book-list-item .book-cover img {
+  max-width: 100%;
+}
+
+.book-list-item .book-details {
+ 
+}
+
+.book-list-item .book-details .book-title {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.book-list-item .book-details .book-author {
+  margin-bottom: 10px;
+}
+
+.book-list-item .book-details .book-price {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.book-list-item .book-details .add-to-cart {
+  width: 150px;
+  margin: 20px 0;
+  background-color: cadetblue;
+}
+
