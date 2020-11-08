@@ -3,11 +3,12 @@ import './shopping-cart-table.css'
 import { connect } from 'react-redux'
 import { bookAddedToCart, bookRemovedFromCart, allBooksRemovedFromCart } from '../../actions'
 
-const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) => {
+const ShoppingCartTable = ({ items, totalPrice, onIncrease, onDecrease, onDelete }) => {
 
   const renderRow = (item, idx) => {
 
     const { id, title, count, total } = item
+    
     return (
       <tr key={id}>
         <td>{idx + 1}</td>
@@ -54,7 +55,7 @@ const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) =
       </table>
 
       <div className="total">
-        Total: ${total}
+        Total: ${totalPrice}
       </div>
     </div>
   )
@@ -63,7 +64,7 @@ const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) =
 const mapStateToProps = ({ shoppingCart: { cartItems, orderTotal }}) => {
   return {
     items: cartItems,
-    total: orderTotal
+    totalPrice: orderTotal
   }
 }
 
