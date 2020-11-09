@@ -11,7 +11,7 @@ const App = ({items, totalPrice}) => {
       <ShopHeader numItems={items.length} total={totalPrice} />
       <Switch>
         <Route 
-          path='/'
+          path='/book-store'
           component={HomePage}
           exact />
         <Route 
